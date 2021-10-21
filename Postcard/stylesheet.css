@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Open+Sans:wght@500&display=swap');
+@font-face {
+    font-family: 'Festive';
+    src: url('https://fonts.googleapis.com/css2?family=Festive&family=Open+Sans:wght@500&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 1.3rem sans-serif;
+    padding: 0.5em;
+    margin: 0;
+    background: white;
+    background: url(WWbackground.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    position: relative;
+    width: 740px;
+    height: 498px;
+    margin: 0 auto;
+    padding: 1em;
+    font: 1em "Festive", monospace;
+    
+    box-sizing: border-box;
+    background: white url(postcardBG2.png);
+
+/*we create our grid */
+display: grid;
+grid-gap: 10px;
+grid-template-columns: repeat (2, 1fr);
+grid-template-rows: 5em 1em 1em 1em;
+}
+
+h1 {
+    font: 1em "Festive", monospace;
+    align-self: end;
+}
+
+#message {
+    grid-row: 1/4;
+    margin-left:30px;
+}
+
+#from, #reply {
+    margin-top: 100px;
+    margin-left: 60px;
+    display: flex;
+    grid-column:2/2;
+}
+
+label {
+    font: .8em, 'Festive', cursive, sans-serif;
+}
+
+input, textarea {
+    display: block;
+    font: 1.4em/1.5em 'Festive', cursive, sans-serif;
+    border: none;
+    padding: 0 10px;
+    margin: 0;
+    background: none;
+    width: 60%;
+}
+
+input:focus, textarea:focus {
+    background: rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+textarea {
+    display: block;
+    padding: 10px;
+    margin: 10px 0 0 -10px;
+    width: 48%;
+    height: 90%;
+
+    border-right: 1px solid;
+
+    /* resize:none; */
+    overflow: auto;
+}
+
+button {
+    padding: 5px;
+    font: .6em 'Festive', cursive, sans-serif;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.button{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    height: 40px;
+    grid-column: 2/2;
+  }
+
+button:after {
+    content: "";
+}
+
+button:hover, button:focus {
+    outline: none;
+    background: transparent;
+    color:white;
+}
+
+img {
+    align-content: center;
+}
